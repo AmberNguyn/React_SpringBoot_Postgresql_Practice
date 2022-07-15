@@ -1,0 +1,9 @@
+thead th {
+    text-align: center;
+    width: 10%;
+}
+
+tbody td {
+    text-align: center;
+    vertical-align: middle;
+}

@@ -1,0 +1,13 @@
+div label {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* .first-col {
+    border-right: 0.5px solid rgb(199, 187, 187);
+} */
+
+.save-button,
+.back-to-list-button {
+    margin: 5px auto;
+}

@@ -1,18 +1,32 @@
-img {
-    width: 30%;
-    height: 30%;
+.head-nav {
+    position: sticky;
+    top: 0;
+}
+
+
+.nav_img {
+    width: 100px;
+    height: 100px;
     margin-left: 20px;
+    display: inline-block;
 }
 
 .nav-bg {
     background-color: #073c53;
 }
 
-.searchBar {
-    margin-right: 20px;
-}
 
 div ul li a {
+    font-size: 20px;
     color: whitesmoke;
-    font-weight: 400;
+    font-weight: bold;
+    margin: 0 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+div ul li a:hover {
+    font-size: 21px;
+    color: antiquewhite;
+    text-decoration: none;
 }

@@ -1,0 +1,39 @@
+
+.footer_bar {
+    background-color: #073c53;
+}
+
+.footer_img {
+    width: 120px;
+    height: 120px;
+    margin-left: 30px;
+}
+
+
+footer p {
+    font-size: 16px;
+    color: whitesmoke;
+
+}
+
+.app_name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer div:nth-child(2),
+footer div:nth-child(3) {
+    margin-top: 15px;
+}
+
+footer div a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer div a:hover {
+    font-size: 17px;
+    color: antiquewhite;
+    text-decoration: none;
+}
+

@@ -1,23 +1,11 @@
-import './App.css';
-import Footer from './footer/Footer';
-import MainSection from './mainSection/MainSection';
-import Nav from './navBar/Nav';
-
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Homepage from "./homepage/homepage";
 
 function App() {
   return (
     <div>
-      <header>
-        <Nav></Nav>
-      </header>
-        
-      <section>
-      <MainSection></MainSection>
-      </section>
-
-      <footer>
-        <Footer></Footer>
-      </footer>
+      <Homepage></Homepage>
     </div>
   );
 }

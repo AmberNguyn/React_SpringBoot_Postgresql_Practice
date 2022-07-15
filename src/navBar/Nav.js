@@ -1,35 +1,42 @@
 import React from "react";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <div>
+    <div className="head-nav">
       <nav className="row navbar nav-bg">
-        <div>
-          <img src="school_logo.png" alt="school_logo"></img>
+        <div className="col-3">
+          <img className="nav_img" src="school_logo.png" alt="school_logo"></img>
         </div>
 
-        <div>
+        <div className="col-6">
           <ul className="nav justify-content-center">
+          <li className="nav-item">
+              <Link to="/homepage">
+                Home
+              </Link>
+            </li>
+
             <li className="nav-item">
-              <a className="nav-link active" href="#">
-                <i class="fa fa-user" aria-hidden="true"></i> Teachers
-              </a>
+              <Link to="/teachers">
+                Teachers
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link to="/assignments">
                 Assignments
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link to="/contracts">
                 Contracts
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
 
-        <div className="searchBar">
+        <div className="searchBar col-3 d-flex justify-content-end">
           <form className="form-inline my-2 my-lg-0">
             <input
               className="form-control mr-sm-2"
@@ -45,6 +52,9 @@ export default function Nav() {
           </form>
         </div>
       </nav>
+
+
+
     </div>
   );
 }
