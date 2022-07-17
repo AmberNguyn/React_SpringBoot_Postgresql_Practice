@@ -52,6 +52,7 @@ const AddTeacher = () => {
           console.log("Teacher data updated successfully", response.data);
           // history.push("/teachers");
           console.log(response.data);
+          showNotification();
         })
         .catch((error) => {
           console.log("Something went wrong", error);
@@ -63,6 +64,7 @@ const AddTeacher = () => {
         .then((response) => {
           console.log("teacher added successfully", response.data);
           // history.push("/teachers");
+          showNotification();
         })
         .catch((error) => {
           console.log("something went wrong", error);
@@ -94,6 +96,14 @@ const AddTeacher = () => {
         });
     }
   }, []);
+
+
+    const showNotification = () => {
+      const h3 = document.createElement('h3');
+      h3.innerHTML = 'Successfully added';
+      const saveButton = document.querySelector('.save-button');
+      saveButton.before(h3);
+    }
 
 
 
