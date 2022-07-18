@@ -52,7 +52,7 @@ const AddTeacher = () => {
           console.log("Teacher data updated successfully", response.data);
           // history.push("/teachers");
           console.log(response.data);
-          showNotification();
+          showNotification("Updated successfully");
         })
         .catch((error) => {
           console.log("Something went wrong", error);
@@ -64,7 +64,7 @@ const AddTeacher = () => {
         .then((response) => {
           console.log("teacher added successfully", response.data);
           // history.push("/teachers");
-          showNotification();
+          showNotification("Created successfully!");
         })
         .catch((error) => {
           console.log("something went wrong", error);
@@ -98,11 +98,19 @@ const AddTeacher = () => {
   }, []);
 
 
-    const showNotification = () => {
-      const h3 = document.createElement('h3');
-      h3.innerHTML = 'Successfully added';
-      const saveButton = document.querySelector('.save-button');
-      saveButton.before(h3);
+    const showNotification = (text) => {
+      const backToListButton = document.querySelector(".back-to-list-button")
+      const divSuccess = document.createElement("div", {id : "alertDiv"});
+      divSuccess.setAttribute("class", "alert alert-success min-vw-50 text-center");
+      divSuccess.setAttribute("role", "alert");
+      divSuccess.style.position = "absolute";
+      divSuccess.style.bottom = "2vh";
+      
+      divSuccess.innerHTML = text;
+
+      backToListButton.after(divSuccess);
+      setTimeout(() => divSuccess.remove(), 2000);
+      
     }
 
 
